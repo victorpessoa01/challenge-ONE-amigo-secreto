@@ -4,7 +4,8 @@ let friendsList = [];
 let friend = "";
 
 function addFriend() { 
-    friend = document.getElementById("amigo").value.trim();
+    friend = document.getElementById("amigo");
+    friend = friend.value;
 
     if(friend !== "") {
         if(friendsList.includes(friend)) {
@@ -17,9 +18,6 @@ function addFriend() {
     } 
     
     console.log(friendsList);
-    friend = "";
-    
+    document.getElementById("amigo").value = "";
 };
-
-console.log(friend);
 
